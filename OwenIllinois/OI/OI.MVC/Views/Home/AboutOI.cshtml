@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "About Owens-Illinois";
+}
+
+<div id="main-wrapper">
+                <div class="panel-body">
+                      
+                        <div>
+                            <img src="/images/AboutOI.png" alt="Owens-Illinois." >
+                        </div>
+                    </div>
+                </div>
+    
+
+@section scripts {
+    @Scripts.Render("~/bundles/dataTables")
+    <script type="text/javascript">
+        $(function () {
+            var userTable = $("#userList").dataTable({
+                "bPaginate": true,
+                "bAutoWidth": false,
+                "aDataSort": true,
+                "bFilter": true
+            });
+        });
+
+    </script>
+}

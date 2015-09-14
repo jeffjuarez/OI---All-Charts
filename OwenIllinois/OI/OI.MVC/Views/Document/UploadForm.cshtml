@@ -1,0 +1,67 @@
+﻿
+
+@{
+    ViewBag.Title = "OI Forms";
+}
+<div class="page-title">
+    <h3>OI Forms</h3>
+    <div class="page-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="active">Upload Excel Data</li>            
+        </ol>
+    </div>
+</div>
+
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+           
+                <div class="box-body table-responsive" id="apeFormsTable">
+                    <div class="col-md-6">
+
+                        @using (Html.BeginForm("Upload", "Document", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                        {
+                            <table cellspacing="3" cellpadding="3">
+                                <tr>
+                                    <td class="box-body table-responsive">
+                                        <label for="uploadedFile">File:</label>
+                                        <input type="file" name="uploadedFile" id="uploadedFile" style="width:400px;" />
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        <input type="submit" value="Upload" style="margin-top: 25px;font-weight:bold;" id="btnUploadResult" />
+                                        @*<button class="btn btn-primary" id="btnProcessing">
+                                            <span class="fa fa-refresh fa-spin"></span>
+                                            Uploading OI Excel Data....
+                                        </button>*@
+                                    </td>
+                                </tr>
+
+                            </table>
+
+                        }
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div id="main-wrapper">
+    <div class="row">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-white">
+                    <div class="panel-body">
+                        @Html.Partial("_DocumentsPartial")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

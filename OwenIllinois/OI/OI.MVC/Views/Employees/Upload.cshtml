@@ -1,0 +1,51 @@
+﻿@model OI.Entities.Models.Employee
+@{
+    ViewBag.Title = "Upload";
+}
+
+<div class="page-title">
+    <h3>Upload</h3>
+    <div class="page-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="active">Upload New Document</li>            
+        </ol>
+    </div>
+</div>
+
+<div id="main-wrapper">
+    <div class="row">        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-white">
+                    <div class="panel-body">
+@using (Html.BeginForm("UploadFile", "Employees", new { id = @Model.Id }, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <div class="form-group">
+            <div class="col-md-10">
+                <input type="file" name="FileUpload" class="btn btn-default" />
+                @Html.DropDownList("resultType", (IEnumerable<SelectListItem>)ViewBag.resultTypeList, "--Choose Result Type--")
+                <input type="submit" name="Submit" value="Upload" class="btn btn-default" />
+            </div>
+        </div>
+        
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

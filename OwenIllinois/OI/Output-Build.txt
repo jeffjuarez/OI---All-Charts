@@ -1,0 +1,7 @@
+﻿1>------ Rebuild All started: Project: Repository.Pattern, Configuration: Debug Any CPU ------
+1>  Repository.Pattern -> C:\Projects\OwenIllinois\OI\Repository.Pattern\bin\Debug\Repository.Pattern.dll
+2>------ Rebuild All started: Project: Repository.Pattern.Ef6, Configuration: Debug Any CPU ------
+2>  Repository.Pattern.Ef6 -> C:\Projects\OwenIllinois\OI\Repository.Pattern.Ef6\bin\Debug\Repository.Pattern.Ef6.dll
+3>------ Rebuild All started: Project: OI.Entities, Configuration: Debug Any CPU ------
+3>  OI.Entities -> C:\Projects\OwenIllinois\OI\OI.Entities\bin\Debug\OI.Entities.dll
+========== Rebuild All: 3 succeeded, 0 failed, 0 skipped ==========

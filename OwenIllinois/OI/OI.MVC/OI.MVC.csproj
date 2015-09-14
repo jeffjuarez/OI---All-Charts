@@ -1,0 +1,972 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AEFA2508-061F-4B96-9D53-D9FD20A05576}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OI.MVC</RootNamespace>
+    <AssemblyName>OI.MVC</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\packages\Castle.Windsor.3.3.0\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNet.Highcharts">
+      <HintPath>..\packages\Highchart\DotNet.Highcharts.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Excel.4.5, Version=2.1.2.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Excel.4.5.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OI.Entities">
+      <HintPath>..\OI.Entities\bin\Debug\OI.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\target\generated-sources\annotations\" />
+    <Folder Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\tmp\" />
+    <Folder Include="UploadedFiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\ApplicationCastleInstaller.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\CastleControllerFactory.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ChartDataController.cs" />
+    <Compile Include="Controllers\DocumentController.cs" />
+    <Compile Include="Controllers\EmployeesController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\AccountHelpers.cs" />
+    <Compile Include="Helpers\MvcExtensionHelper.cs" />
+    <Compile Include="Helpers\SharpZipLibHelper.cs" />
+    <Compile Include="Models\AccountData.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ChartDataClass.cs" />
+    <Compile Include="Models\DocumentViewModel.cs" />
+    <Compile Include="Models\UserViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\AdminLTE.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap\bootstrap.css" />
+    <Content Include="Content\bootstrap\dataTables.tableTools.css" />
+    <Content Include="Content\bootstrap\font-awesome.css" />
+    <Content Include="Content\images\snow.png" />
+    <Content Include="Content\images\sun.png" />
+    <Content Include="Content\plugins\3d-bold-navigation\css\reset.css" />
+    <Content Include="Content\plugins\3d-bold-navigation\css\style.css" />
+    <Content Include="Content\plugins\3d-bold-navigation\js\jquery-2.1.1.js" />
+    <Content Include="Content\plugins\3d-bold-navigation\js\main.js" />
+    <Content Include="Content\plugins\3d-bold-navigation\js\modernizr.js" />
+    <Content Include="Content\plugins\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Content\plugins\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Content\plugins\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\plugins\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\plugins\bootstrap\js\npm.js" />
+    <Content Include="Content\plugins\datatables\dataTables.bootstrap.css" />
+    <Content Include="Content\plugins\datatables\dataTables.tableTools.css" />
+    <Content Include="Content\plugins\datatables\images\sort_asc.png" />
+    <Content Include="Content\plugins\datatables\images\sort_asc_disabled.png" />
+    <Content Include="Content\plugins\datatables\images\sort_both.png" />
+    <Content Include="Content\plugins\datatables\images\sort_desc.png" />
+    <Content Include="Content\plugins\datatables\images\sort_desc_disabled.png" />
+    <Content Include="Content\plugins\fontawesome\css\font-awesome.css" />
+    <Content Include="Content\plugins\fontawesome\css\font-awesome.min.css" />
+    <Content Include="Content\plugins\fontawesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\plugins\jquery-blockui\jquery.blockui.js" />
+    <Content Include="Content\plugins\jquery-ui\external\jquery\jquery.js" />
+    <Content Include="Content\plugins\jquery-ui\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Content\plugins\jquery-ui\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Content\plugins\jquery-ui\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Content\plugins\jquery-ui\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Content\plugins\jquery-ui\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Content\plugins\jquery-ui\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\plugins\jquery-ui\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Content\plugins\jquery-ui\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Content\plugins\jquery-ui\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Content\plugins\jquery-ui\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\plugins\jquery-ui\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Content\plugins\jquery-ui\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Content\plugins\jquery-ui\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Content\plugins\jquery-ui\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\plugins\jquery-ui\index.html" />
+    <Content Include="Content\plugins\jquery-ui\jquery-ui.css" />
+    <Content Include="Content\plugins\jquery-ui\jquery-ui.js" />
+    <Content Include="Content\plugins\jquery-ui\jquery-ui.min.css" />
+    <Content Include="Content\plugins\jquery-ui\jquery-ui.min.js" />
+    <Content Include="Content\plugins\jquery-ui\jquery-ui.structure.css" />
+    <Content Include="Content\plugins\jquery-ui\jquery-ui.structure.min.css" />
+    <Content Include="Content\plugins\jquery-ui\jquery-ui.theme.css" />
+    <Content Include="Content\plugins\jquery-ui\jquery-ui.theme.min.css" />
+    <Content Include="Content\plugins\jquery\jquery-2.1.3.js" />
+    <Content Include="Content\plugins\line-icons\fonts\Simple-Line-Icons.dev.svg" />
+    <Content Include="Content\plugins\line-icons\fonts\Simple-Line-Icons.svg" />
+    <Content Include="Content\plugins\line-icons\icons-lte-ie7.js" />
+    <Content Include="Content\plugins\line-icons\simple-line-icons.css" />
+    <Content Include="Content\plugins\metrojs\images\1pixel.gif" />
+    <Content Include="Content\plugins\metrojs\images\metroIcons.jpg" />
+    <Content Include="Content\plugins\metrojs\images\metroIcons_light.jpg" />
+    <Content Include="Content\plugins\metrojs\MetroJs.css" />
+    <Content Include="Content\plugins\metrojs\MetroJs.js" />
+    <Content Include="Content\plugins\metrojs\MetroJs.min.css" />
+    <Content Include="Content\plugins\metrojs\MetroJs.min.js" />
+    <Content Include="Content\plugins\offcanvasmenueffects\css\demo.css" />
+    <Content Include="Content\plugins\offcanvasmenueffects\css\menu_bubble.css" />
+    <Content Include="Content\plugins\offcanvasmenueffects\css\menu_cornerbox.css" />
+    <Content Include="Content\plugins\offcanvasmenueffects\css\menu_cornerbox_nested.css" />
+    <Content Include="Content\plugins\offcanvasmenueffects\css\menu_cornermorph.css" />
+    <Content Include="Content\plugins\offcanvasmenueffects\css\menu_elastic.css" />
+    <Content Include="Content\plugins\offcanvasmenueffects\css\menu_sideslide.css" />
+    <Content Include="Content\plugins\offcanvasmenueffects\css\menu_topexpand.css" />
+    <Content Include="Content\plugins\offcanvasmenueffects\css\menu_topside.css" />
+    <Content Include="Content\plugins\offcanvasmenueffects\css\menu_wave.css" />
+    <Content Include="Content\plugins\offcanvasmenueffects\css\normalize.css" />
+    <Content Include="Content\plugins\offcanvasmenueffects\js\classie.js" />
+    <Content Include="Content\plugins\offcanvasmenueffects\js\main.js" />
+    <Content Include="Content\plugins\offcanvasmenueffects\js\main2.js" />
+    <Content Include="Content\plugins\offcanvasmenueffects\js\main3.js" />
+    <Content Include="Content\plugins\offcanvasmenueffects\js\main4.js" />
+    <Content Include="Content\plugins\offcanvasmenueffects\js\snap.svg-min.js" />
+    <Content Include="Content\plugins\pace-master\pace.js" />
+    <Content Include="Content\plugins\pace-master\pace.min.js" />
+    <Content Include="Content\plugins\pace-master\templates\pace-theme-barber-shop.tmpl.css" />
+    <Content Include="Content\plugins\pace-master\templates\pace-theme-big-counter.tmpl.css" />
+    <Content Include="Content\plugins\pace-master\templates\pace-theme-bounce.tmpl.css" />
+    <Content Include="Content\plugins\pace-master\templates\pace-theme-center-atom.tmpl.css" />
+    <Content Include="Content\plugins\pace-master\templates\pace-theme-center-circle.tmpl.css" />
+    <Content Include="Content\plugins\pace-master\templates\pace-theme-center-radar.tmpl.css" />
+    <Content Include="Content\plugins\pace-master\templates\pace-theme-center-simple.tmpl.css" />
+    <Content Include="Content\plugins\pace-master\templates\pace-theme-corner-indicator.tmpl.css" />
+    <Content Include="Content\plugins\pace-master\templates\pace-theme-fill-left.tmpl.css" />
+    <Content Include="Content\plugins\pace-master\templates\pace-theme-flash.tmpl.css" />
+    <Content Include="Content\plugins\pace-master\templates\pace-theme-flat-top.tmpl.css" />
+    <Content Include="Content\plugins\pace-master\templates\pace-theme-loading-bar.tmpl.css" />
+    <Content Include="Content\plugins\pace-master\templates\pace-theme-mac-osx.tmpl.css" />
+    <Content Include="Content\plugins\pace-master\templates\pace-theme-minimal.tmpl.css" />
+    <Content Include="Content\plugins\pace-master\themes\black\pace-theme-barber-shop.css" />
+    <Content Include="Content\plugins\pace-master\themes\black\pace-theme-big-counter.css" />
+    <Content Include="Content\plugins\pace-master\themes\black\pace-theme-bounce.css" />
+    <Content Include="Content\plugins\pace-master\themes\black\pace-theme-center-atom.css" />
+    <Content Include="Content\plugins\pace-master\themes\black\pace-theme-center-circle.css" />
+    <Content Include="Content\plugins\pace-master\themes\black\pace-theme-center-radar.css" />
+    <Content Include="Content\plugins\pace-master\themes\black\pace-theme-center-simple.css" />
+    <Content Include="Content\plugins\pace-master\themes\black\pace-theme-corner-indicator.css" />
+    <Content Include="Content\plugins\pace-master\themes\black\pace-theme-fill-left.css" />
+    <Content Include="Content\plugins\pace-master\themes\black\pace-theme-flash.css" />
+    <Content Include="Content\plugins\pace-master\themes\black\pace-theme-flat-top.css" />
+    <Content Include="Content\plugins\pace-master\themes\black\pace-theme-loading-bar.css" />
+    <Content Include="Content\plugins\pace-master\themes\black\pace-theme-mac-osx.css" />
+    <Content Include="Content\plugins\pace-master\themes\black\pace-theme-minimal.css" />
+    <Content Include="Content\plugins\pace-master\themes\blue\pace-theme-barber-shop.css" />
+    <Content Include="Content\plugins\pace-master\themes\blue\pace-theme-big-counter.css" />
+    <Content Include="Content\plugins\pace-master\themes\blue\pace-theme-bounce.css" />
+    <Content Include="Content\plugins\pace-master\themes\blue\pace-theme-center-atom.css" />
+    <Content Include="Content\plugins\pace-master\themes\blue\pace-theme-center-circle.css" />
+    <Content Include="Content\plugins\pace-master\themes\blue\pace-theme-center-radar.css" />
+    <Content Include="Content\plugins\pace-master\themes\blue\pace-theme-center-simple.css" />
+    <Content Include="Content\plugins\pace-master\themes\blue\pace-theme-corner-indicator.css" />
+    <Content Include="Content\plugins\pace-master\themes\blue\pace-theme-fill-left.css" />
+    <Content Include="Content\plugins\pace-master\themes\blue\pace-theme-flash.css" />
+    <Content Include="Content\plugins\pace-master\themes\blue\pace-theme-flat-top.css" />
+    <Content Include="Content\plugins\pace-master\themes\blue\pace-theme-loading-bar.css" />
+    <Content Include="Content\plugins\pace-master\themes\blue\pace-theme-mac-osx.css" />
+    <Content Include="Content\plugins\pace-master\themes\blue\pace-theme-minimal.css" />
+    <Content Include="Content\plugins\pace-master\themes\green\pace-theme-barber-shop.css" />
+    <Content Include="Content\plugins\pace-master\themes\green\pace-theme-big-counter.css" />
+    <Content Include="Content\plugins\pace-master\themes\green\pace-theme-bounce.css" />
+    <Content Include="Content\plugins\pace-master\themes\green\pace-theme-center-atom.css" />
+    <Content Include="Content\plugins\pace-master\themes\green\pace-theme-center-circle.css" />
+    <Content Include="Content\plugins\pace-master\themes\green\pace-theme-center-radar.css" />
+    <Content Include="Content\plugins\pace-master\themes\green\pace-theme-center-simple.css" />
+    <Content Include="Content\plugins\pace-master\themes\green\pace-theme-corner-indicator.css" />
+    <Content Include="Content\plugins\pace-master\themes\green\pace-theme-fill-left.css" />
+    <Content Include="Content\plugins\pace-master\themes\green\pace-theme-flash.css" />
+    <Content Include="Content\plugins\pace-master\themes\green\pace-theme-flat-top.css" />
+    <Content Include="Content\plugins\pace-master\themes\green\pace-theme-loading-bar.css" />
+    <Content Include="Content\plugins\pace-master\themes\green\pace-theme-mac-osx.css" />
+    <Content Include="Content\plugins\pace-master\themes\green\pace-theme-minimal.css" />
+    <Content Include="Content\plugins\pace-master\themes\orange\pace-theme-barber-shop.css" />
+    <Content Include="Content\plugins\pace-master\themes\orange\pace-theme-big-counter.css" />
+    <Content Include="Content\plugins\pace-master\themes\orange\pace-theme-bounce.css" />
+    <Content Include="Content\plugins\pace-master\themes\orange\pace-theme-center-atom.css" />
+    <Content Include="Content\plugins\pace-master\themes\orange\pace-theme-center-circle.css" />
+    <Content Include="Content\plugins\pace-master\themes\orange\pace-theme-center-radar.css" />
+    <Content Include="Content\plugins\pace-master\themes\orange\pace-theme-center-simple.css" />
+    <Content Include="Content\plugins\pace-master\themes\orange\pace-theme-corner-indicator.css" />
+    <Content Include="Content\plugins\pace-master\themes\orange\pace-theme-fill-left.css" />
+    <Content Include="Content\plugins\pace-master\themes\orange\pace-theme-flash.css" />
+    <Content Include="Content\plugins\pace-master\themes\orange\pace-theme-flat-top.css" />
+    <Content Include="Content\plugins\pace-master\themes\orange\pace-theme-loading-bar.css" />
+    <Content Include="Content\plugins\pace-master\themes\orange\pace-theme-mac-osx.css" />
+    <Content Include="Content\plugins\pace-master\themes\orange\pace-theme-minimal.css" />
+    <Content Include="Content\plugins\pace-master\themes\pink\pace-theme-barber-shop.css" />
+    <Content Include="Content\plugins\pace-master\themes\pink\pace-theme-big-counter.css" />
+    <Content Include="Content\plugins\pace-master\themes\pink\pace-theme-bounce.css" />
+    <Content Include="Content\plugins\pace-master\themes\pink\pace-theme-center-atom.css" />
+    <Content Include="Content\plugins\pace-master\themes\pink\pace-theme-center-circle.css" />
+    <Content Include="Content\plugins\pace-master\themes\pink\pace-theme-center-radar.css" />
+    <Content Include="Content\plugins\pace-master\themes\pink\pace-theme-center-simple.css" />
+    <Content Include="Content\plugins\pace-master\themes\pink\pace-theme-corner-indicator.css" />
+    <Content Include="Content\plugins\pace-master\themes\pink\pace-theme-fill-left.css" />
+    <Content Include="Content\plugins\pace-master\themes\pink\pace-theme-flash.css" />
+    <Content Include="Content\plugins\pace-master\themes\pink\pace-theme-flat-top.css" />
+    <Content Include="Content\plugins\pace-master\themes\pink\pace-theme-loading-bar.css" />
+    <Content Include="Content\plugins\pace-master\themes\pink\pace-theme-mac-osx.css" />
+    <Content Include="Content\plugins\pace-master\themes\pink\pace-theme-minimal.css" />
+    <Content Include="Content\plugins\pace-master\themes\purple\pace-theme-barber-shop.css" />
+    <Content Include="Content\plugins\pace-master\themes\purple\pace-theme-big-counter.css" />
+    <Content Include="Content\plugins\pace-master\themes\purple\pace-theme-bounce.css" />
+    <Content Include="Content\plugins\pace-master\themes\purple\pace-theme-center-atom.css" />
+    <Content Include="Content\plugins\pace-master\themes\purple\pace-theme-center-circle.css" />
+    <Content Include="Content\plugins\pace-master\themes\purple\pace-theme-center-radar.css" />
+    <Content Include="Content\plugins\pace-master\themes\purple\pace-theme-center-simple.css" />
+    <Content Include="Content\plugins\pace-master\themes\purple\pace-theme-corner-indicator.css" />
+    <Content Include="Content\plugins\pace-master\themes\purple\pace-theme-fill-left.css" />
+    <Content Include="Content\plugins\pace-master\themes\purple\pace-theme-flash.css" />
+    <Content Include="Content\plugins\pace-master\themes\purple\pace-theme-flat-top.css" />
+    <Content Include="Content\plugins\pace-master\themes\purple\pace-theme-loading-bar.css" />
+    <Content Include="Content\plugins\pace-master\themes\purple\pace-theme-mac-osx.css" />
+    <Content Include="Content\plugins\pace-master\themes\purple\pace-theme-minimal.css" />
+    <Content Include="Content\plugins\pace-master\themes\red\pace-theme-barber-shop.css" />
+    <Content Include="Content\plugins\pace-master\themes\red\pace-theme-big-counter.css" />
+    <Content Include="Content\plugins\pace-master\themes\red\pace-theme-bounce.css" />
+    <Content Include="Content\plugins\pace-master\themes\red\pace-theme-center-atom.css" />
+    <Content Include="Content\plugins\pace-master\themes\red\pace-theme-center-circle.css" />
+    <Content Include="Content\plugins\pace-master\themes\red\pace-theme-center-radar.css" />
+    <Content Include="Content\plugins\pace-master\themes\red\pace-theme-center-simple.css" />
+    <Content Include="Content\plugins\pace-master\themes\red\pace-theme-corner-indicator.css" />
+    <Content Include="Content\plugins\pace-master\themes\red\pace-theme-fill-left.css" />
+    <Content Include="Content\plugins\pace-master\themes\red\pace-theme-flash.css" />
+    <Content Include="Content\plugins\pace-master\themes\red\pace-theme-flat-top.css" />
+    <Content Include="Content\plugins\pace-master\themes\red\pace-theme-loading-bar.css" />
+    <Content Include="Content\plugins\pace-master\themes\red\pace-theme-mac-osx.css" />
+    <Content Include="Content\plugins\pace-master\themes\red\pace-theme-minimal.css" />
+    <Content Include="Content\plugins\pace-master\themes\silver\pace-theme-barber-shop.css" />
+    <Content Include="Content\plugins\pace-master\themes\silver\pace-theme-big-counter.css" />
+    <Content Include="Content\plugins\pace-master\themes\silver\pace-theme-bounce.css" />
+    <Content Include="Content\plugins\pace-master\themes\silver\pace-theme-center-atom.css" />
+    <Content Include="Content\plugins\pace-master\themes\silver\pace-theme-center-circle.css" />
+    <Content Include="Content\plugins\pace-master\themes\silver\pace-theme-center-radar.css" />
+    <Content Include="Content\plugins\pace-master\themes\silver\pace-theme-center-simple.css" />
+    <Content Include="Content\plugins\pace-master\themes\silver\pace-theme-corner-indicator.css" />
+    <Content Include="Content\plugins\pace-master\themes\silver\pace-theme-fill-left.css" />
+    <Content Include="Content\plugins\pace-master\themes\silver\pace-theme-flash.css" />
+    <Content Include="Content\plugins\pace-master\themes\silver\pace-theme-flat-top.css" />
+    <Content Include="Content\plugins\pace-master\themes\silver\pace-theme-loading-bar.css" />
+    <Content Include="Content\plugins\pace-master\themes\silver\pace-theme-mac-osx.css" />
+    <Content Include="Content\plugins\pace-master\themes\silver\pace-theme-minimal.css" />
+    <Content Include="Content\plugins\pace-master\themes\white\pace-theme-barber-shop.css" />
+    <Content Include="Content\plugins\pace-master\themes\white\pace-theme-big-counter.css" />
+    <Content Include="Content\plugins\pace-master\themes\white\pace-theme-bounce.css" />
+    <Content Include="Content\plugins\pace-master\themes\white\pace-theme-center-atom.css" />
+    <Content Include="Content\plugins\pace-master\themes\white\pace-theme-center-circle.css" />
+    <Content Include="Content\plugins\pace-master\themes\white\pace-theme-center-radar.css" />
+    <Content Include="Content\plugins\pace-master\themes\white\pace-theme-center-simple.css" />
+    <Content Include="Content\plugins\pace-master\themes\white\pace-theme-corner-indicator.css" />
+    <Content Include="Content\plugins\pace-master\themes\white\pace-theme-fill-left.css" />
+    <Content Include="Content\plugins\pace-master\themes\white\pace-theme-flash.css" />
+    <Content Include="Content\plugins\pace-master\themes\white\pace-theme-flat-top.css" />
+    <Content Include="Content\plugins\pace-master\themes\white\pace-theme-loading-bar.css" />
+    <Content Include="Content\plugins\pace-master\themes\white\pace-theme-mac-osx.css" />
+    <Content Include="Content\plugins\pace-master\themes\white\pace-theme-minimal.css" />
+    <Content Include="Content\plugins\pace-master\themes\yellow\pace-theme-barber-shop.css" />
+    <Content Include="Content\plugins\pace-master\themes\yellow\pace-theme-big-counter.css" />
+    <Content Include="Content\plugins\pace-master\themes\yellow\pace-theme-bounce.css" />
+    <Content Include="Content\plugins\pace-master\themes\yellow\pace-theme-center-atom.css" />
+    <Content Include="Content\plugins\pace-master\themes\yellow\pace-theme-center-circle.css" />
+    <Content Include="Content\plugins\pace-master\themes\yellow\pace-theme-center-radar.css" />
+    <Content Include="Content\plugins\pace-master\themes\yellow\pace-theme-center-simple.css" />
+    <Content Include="Content\plugins\pace-master\themes\yellow\pace-theme-corner-indicator.css" />
+    <Content Include="Content\plugins\pace-master\themes\yellow\pace-theme-fill-left.css" />
+    <Content Include="Content\plugins\pace-master\themes\yellow\pace-theme-flash.css" />
+    <Content Include="Content\plugins\pace-master\themes\yellow\pace-theme-flat-top.css" />
+    <Content Include="Content\plugins\pace-master\themes\yellow\pace-theme-loading-bar.css" />
+    <Content Include="Content\plugins\pace-master\themes\yellow\pace-theme-mac-osx.css" />
+    <Content Include="Content\plugins\pace-master\themes\yellow\pace-theme-minimal.css" />
+    <Content Include="Content\plugins\slidepushmenus\css\component.css" />
+    <Content Include="Content\plugins\slidepushmenus\css\default.css" />
+    <Content Include="Content\plugins\slidepushmenus\js\classie.js" />
+    <Content Include="Content\plugins\slidepushmenus\js\modernizr.custom.js" />
+    <Content Include="Content\plugins\switchery\switchery.css" />
+    <Content Include="Content\plugins\switchery\switchery.js" />
+    <Content Include="Content\plugins\switchery\switchery.min.css" />
+    <Content Include="Content\plugins\switchery\switchery.min.js" />
+    <Content Include="Content\plugins\toastr\toastr.min.css" />
+    <Content Include="Content\plugins\toastr\toastr.min.js" />
+    <Content Include="Content\plugins\uniform\css\uniform.default.css" />
+    <Content Include="Content\plugins\uniform\css\uniform.default.min.css" />
+    <Content Include="Content\plugins\uniform\images\bg-input-focus.png" />
+    <Content Include="Content\plugins\uniform\images\bg-input.png" />
+    <Content Include="Content\plugins\uniform\images\sprite.png" />
+    <Content Include="Content\plugins\uniform\jquery.uniform.js" />
+    <Content Include="Content\plugins\uniform\jquery.uniform.min.js" />
+    <Content Include="Content\plugins\waves\waves.css" />
+    <Content Include="Content\plugins\waves\waves.js" />
+    <Content Include="Content\plugins\waves\waves.min.css" />
+    <Content Include="Content\plugins\waves\waves.min.js" />
+    <Content Include="Content\themes\base\images\animated-overlay.gif" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.menu.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.spinner.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\jquery.ui.tooltip.css" />
+    <Content Include="Content\themes\base\minified\images\animated-overlay.gif" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.menu.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.spinner.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="Content\themes\start\images\animated-overlay.gif" />
+    <Content Include="Content\themes\start\images\ui-bg_flat_55_999999_40x100.png" />
+    <Content Include="Content\themes\start\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\start\images\ui-bg_glass_45_0078ae_1x400.png" />
+    <Content Include="Content\themes\start\images\ui-bg_glass_55_f8da4e_1x400.png" />
+    <Content Include="Content\themes\start\images\ui-bg_glass_75_79c9ec_1x400.png" />
+    <Content Include="Content\themes\start\images\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="Content\themes\start\images\ui-bg_gloss-wave_50_6eac2c_500x100.png" />
+    <Content Include="Content\themes\start\images\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="Content\themes\start\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Content\themes\start\images\ui-icons_0078ae_256x240.png" />
+    <Content Include="Content\themes\start\images\ui-icons_056b93_256x240.png" />
+    <Content Include="Content\themes\start\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Content\themes\start\images\ui-icons_e0fdff_256x240.png" />
+    <Content Include="Content\themes\start\images\ui-icons_f5e175_256x240.png" />
+    <Content Include="Content\themes\start\images\ui-icons_f7a50d_256x240.png" />
+    <Content Include="Content\themes\start\images\ui-icons_fcd113_256x240.png" />
+    <Content Include="Content\themes\start\jquery-ui-1.10.3.custom.css" />
+    <Content Include="Content\themes\start\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="Content\theme\custom.css" />
+    <Content Include="Content\theme\green.css" />
+    <Content Include="Content\theme\modern.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="images\avatar1.png" />
+    <Content Include="images\avatar2.png" />
+    <Content Include="images\avatar3.png" />
+    <Content Include="images\avatar4.png" />
+    <Content Include="images\avatar5.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\plugins\3d-bold-navigation\js\.DS_Store" />
+    <Content Include="Content\plugins\3d-bold-navigation\partials\_layout.scss" />
+    <Content Include="Content\plugins\3d-bold-navigation\partials\_mixins.scss" />
+    <Content Include="Content\plugins\3d-bold-navigation\partials\_variables.scss" />
+    <Content Include="Content\plugins\3d-bold-navigation\scss\.DS_Store" />
+    <Content Include="Content\plugins\3d-bold-navigation\scss\style.scss" />
+    <Content Include="Content\plugins\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="Content\plugins\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Content\plugins\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\plugins\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\plugins\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\plugins\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\plugins\fontawesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\plugins\fontawesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\plugins\fontawesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\plugins\fontawesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\plugins\fontawesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\plugins\fontawesome\less\animated.less" />
+    <Content Include="Content\plugins\fontawesome\less\bordered-pulled.less" />
+    <Content Include="Content\plugins\fontawesome\less\core.less" />
+    <Content Include="Content\plugins\fontawesome\less\fixed-width.less" />
+    <Content Include="Content\plugins\fontawesome\less\font-awesome.less" />
+    <Content Include="Content\plugins\fontawesome\less\icons.less" />
+    <Content Include="Content\plugins\fontawesome\less\larger.less" />
+    <Content Include="Content\plugins\fontawesome\less\list.less" />
+    <Content Include="Content\plugins\fontawesome\less\mixins.less" />
+    <Content Include="Content\plugins\fontawesome\less\path.less" />
+    <Content Include="Content\plugins\fontawesome\less\rotated-flipped.less" />
+    <Content Include="Content\plugins\fontawesome\less\stacked.less" />
+    <Content Include="Content\plugins\fontawesome\less\variables.less" />
+    <Content Include="Content\plugins\fontawesome\scss\font-awesome.scss" />
+    <Content Include="Content\plugins\fontawesome\scss\_animated.scss" />
+    <Content Include="Content\plugins\fontawesome\scss\_bordered-pulled.scss" />
+    <Content Include="Content\plugins\fontawesome\scss\_core.scss" />
+    <Content Include="Content\plugins\fontawesome\scss\_fixed-width.scss" />
+    <Content Include="Content\plugins\fontawesome\scss\_icons.scss" />
+    <Content Include="Content\plugins\fontawesome\scss\_larger.scss" />
+    <Content Include="Content\plugins\fontawesome\scss\_list.scss" />
+    <Content Include="Content\plugins\fontawesome\scss\_mixins.scss" />
+    <Content Include="Content\plugins\fontawesome\scss\_path.scss" />
+    <Content Include="Content\plugins\fontawesome\scss\_rotated-flipped.scss" />
+    <Content Include="Content\plugins\fontawesome\scss\_stacked.scss" />
+    <Content Include="Content\plugins\fontawesome\scss\_variables.scss" />
+    <Content Include="Content\plugins\line-icons\fonts\Simple-Line-Icons.eot" />
+    <Content Include="Content\plugins\line-icons\fonts\Simple-Line-Icons.ttf" />
+    <Content Include="Content\plugins\line-icons\fonts\Simple-Line-Icons.woff" />
+    <Content Include="Content\plugins\offcanvasmenueffects\css\.DS_Store" />
+    <Content Include="Content\plugins\slidepushmenus\css\.DS_Store" />
+    <Content Include="Content\plugins\slidepushmenus\js\.DS_Store" />
+    <Content Include="Content\plugins\toastr\toastr.js.map" />
+    <Content Include="Content\plugins\uniform\css\uniform.default.scss" />
+    <Content Include="Content\plugins\waves\waves.min.js.map" />
+    <Content Include="Content\plugins\jquery-blockui\blockUI.jquery.json" />
+    <Content Include="Content\plugins\jquery-blockui\bower.json" />
+    <Content Include="Content\plugins\jquery-blockui\composer.json" />
+    <Content Include="Content\plugins\jquery-blockui\README.md" />
+    <Content Include="Content\bootstrap\bootstrap.css.map" />
+    <Content Include="Content\analytics.tsv" />
+    <None Include="Properties\PublishProfiles\eResult.pubxml" />
+    <None Include="Properties\PublishProfiles\Local.pubxml" />
+    <Content Include="Scripts\core.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\app-convert.properties" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\log4j.properties" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\resources\log4j.properties" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\pages\demo.jsp" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\pages\error.jsp" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\spring\app-convert.properties" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\com\highcharts\export\controller\ExportController.class" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\com\highcharts\export\filter\CorsFilter.class" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\log4j.properties" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload_776ee455_1453bb181b6__8000_00007880.tmp" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload_776ee455_1453bb181b6__8000_00007883.tmp" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload_776ee455_1453bb181b6__8000_00007886.tmp" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload_776ee455_1453bb181b6__8000_00007889.tmp" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload_cf7d419_1454f9ef8a4__8000_00000014.tmp" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload_cf7d419_1454f9ef8a4__8000_00000017.tmp" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload_cf7d419_1454f9ef8a4__8000_00000020.tmp" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload_cf7d419_1454f9ef8a4__8000_00000023.tmp" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload_cf7d419_1454f9ef8a4__8000_00000026.tmp" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload_cf7d419_1454f9ef8a4__8000_00000029.tmp" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload__6795ead4_1458e102cdd__8000_00000965.tmp" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload__6795ead4_1458e102cdd__8000_00000974.tmp" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload__6795ead4_1458e102cdd__8000_00000977.tmp" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload__6795ead4_1458e102cdd__8000_00000980.tmp" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload__6795ead4_1458e102cdd__8000_00000983.tmp" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload__6795ead4_1458e102cdd__8000_00000986.tmp" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload__6795ead4_1458e102cdd__8000_00000989.tmp" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload__6795ead4_1458e102cdd__8000_00000992.tmp" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload__6795ead4_1458e102cdd__8000_00000995.tmp" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload__6795ead4_1458e102cdd__8000_00000998.tmp" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload__6795ead4_1458e102cdd__8000_00001001.tmp" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\readme.md" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\phantomjs\readme.md" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\php\php-batik\index.php" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\3d-column-interactive\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\3d-column-null-values\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\3d-column-stacking-grouping\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\3d-pie-donut\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\3d-pie\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\3d-scatter-draggable\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\area-basic\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\area-inverted\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\area-missing\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\area-negative\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\area-stacked-percent\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\area-stacked\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\arearange-line\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\arearange\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\areaspline\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\bar-basic\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\bar-negative-stack\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\bar-stacked\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\box-plot\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\bubble-3d\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\bubble\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\column-basic\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\column-drilldown\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\column-negative\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\column-parsed\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\column-placement\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\column-rotated-labels\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\column-stacked-and-grouped\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\column-stacked-percent\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\column-stacked\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\columnrange\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\combo-dual-axes\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\combo-meteogram\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\combo-multi-axes\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\combo-regression\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\combo\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\dynamic-click-to-add\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\dynamic-master-detail\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\dynamic-update\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\error-bar\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\funnel\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\gauge-clock\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\gauge-dual\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\gauge-solid\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\gauge-speedometer\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\gauge-vu-meter\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\heatmap-canvas\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\heatmap\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\line-ajax\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\line-basic\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\line-labels\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\line-log-axis\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\line-time-series\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\pie-basic\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\pie-donut\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\pie-drilldown\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\pie-gradient\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\pie-legend\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\pie-monochrome\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\pie-semi-circle\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\polar-spider\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\polar-wind-rose\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\polar\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\pyramid\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\renderer\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\scatter\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\sparkline\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\spline-inverted\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\spline-irregular-time\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\spline-plot-bands\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\spline-symbols\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\examples\waterfall\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-convert\pom.xml" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\converter\SVGConverter.java" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\converter\SVGConverterException.java" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\AbstractPool.java" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\BlockingQueuePool.java" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\ObjectFactory.java" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\ObjectPool.java" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\PoolException.java" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\ServerObjectFactory.java" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\server\Server.java" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\server\ServerState.java" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\server\TimeOut.java" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\util\MimeType.java" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\util\TempDir.java" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\data.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\highcharts-3d.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\highcharts-convert.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\highcharts-more.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\highcharts.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\jquery.1.9.1.min.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\map.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\spring-convert.xml" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\pom.xml" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\java\com\highcharts\export\controller\ExportController.java" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\java\com\highcharts\export\filter\CorsFilter.java" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\META-INF\context.xml" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\css\demo.css" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\Highcharts-icon-160px.png" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\codemirror.css" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\codemirror.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\mode\javascript\index.html" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\mode\javascript\javascript.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\mode\javascript\typescript.html" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\mode\xml\index.html" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\mode\xml\xml.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\closetag.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\dialog.css" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\dialog.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\foldcode.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\formatting.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\javascript-hint.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\loadmode.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\match-highlighter.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\multiplex.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\overlay.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\pig-hint.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\runmode-standalone.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\runmode.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\search.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\searchcursor.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\simple-hint.css" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\simple-hint.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\xml-hint.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\jquery-1.11.0.min.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\jspf\callback.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\jspf\config.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\jspf\lexl.svg" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\spring\export-servlet.xml" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\spring\spring-context.xml" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\web.xml" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\jsp\org\apache\jsp\WEB_002dINF\pages\error_jsp.java" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\java\highcharts-export\pom.xml" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\phantomjs\data.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\phantomjs\highcharts-3d.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\phantomjs\highcharts-convert.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\phantomjs\highcharts-more.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\phantomjs\highcharts.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\phantomjs\jquery.1.9.1.min.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\exporting-server\phantomjs\map.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\gfx\vml-radial-gradient.png" />
+    <Content Include="Scripts\Highcharts-4.0.1\graphics\meteogram-symbols-30px.png" />
+    <Content Include="Scripts\Highcharts-4.0.1\graphics\skies.jpg" />
+    <Content Include="Scripts\Highcharts-4.0.1\graphics\snow.png" />
+    <Content Include="Scripts\Highcharts-4.0.1\graphics\sun.png" />
+    <Content Include="Scripts\Highcharts-4.0.1\index.htm" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\adapters\standalone-framework.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\adapters\standalone-framework.src.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\highcharts-3d.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\highcharts-3d.src.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\highcharts-all.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\highcharts-more.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\highcharts-more.src.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\highcharts.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\highcharts.src.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\modules\canvas-tools.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\modules\canvas-tools.src.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\modules\data.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\modules\data.src.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\modules\drilldown.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\modules\drilldown.src.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\modules\exporting.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\modules\exporting.src.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\modules\funnel.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\modules\funnel.src.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\modules\heatmap.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\modules\heatmap.src.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\modules\no-data-to-display.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\modules\no-data-to-display.src.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\modules\solid-gauge.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\modules\solid-gauge.src.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\themes\dark-blue.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\themes\dark-green.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\themes\dark-unica.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\themes\gray.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\themes\grid-light.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\themes\grid.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\themes\sand-signika.js" />
+    <Content Include="Scripts\Highcharts-4.0.1\js\themes\skies.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery-2.0.0.intellisense.js" />
+    <Content Include="Scripts\jquery-2.0.0.js" />
+    <Content Include="Scripts\jquery-2.0.0.min.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3.min.js" />
+    <Content Include="Scripts\modern.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\pages\calendar.js" />
+    <Content Include="Scripts\pages\charts-chartjs.js" />
+    <Content Include="Scripts\pages\charts-flot.js" />
+    <Content Include="Scripts\pages\charts-morris.js" />
+    <Content Include="Scripts\pages\charts-rickshaw.js" />
+    <Content Include="Scripts\pages\charts-sparkline.js" />
+    <Content Include="Scripts\pages\coming-soon.js" />
+    <Content Include="Scripts\pages\compose.js" />
+    <Content Include="Scripts\pages\contact.js" />
+    <Content Include="Scripts\pages\dashboard.js" />
+    <Content Include="Scripts\pages\form-elements.js" />
+    <Content Include="Scripts\pages\form-image-crop.js" />
+    <Content Include="Scripts\pages\form-select2.js" />
+    <Content Include="Scripts\pages\form-wizard.js" />
+    <Content Include="Scripts\pages\form-x-editable.js" />
+    <Content Include="Scripts\pages\gallery.js" />
+    <Content Include="Scripts\pages\inbox.js" />
+    <Content Include="Scripts\pages\jstree.js" />
+    <Content Include="Scripts\pages\maps-google.js" />
+    <Content Include="Scripts\pages\maps-vector.js" />
+    <Content Include="Scripts\pages\nestable.js" />
+    <Content Include="Scripts\pages\notifications.js" />
+    <Content Include="Scripts\pages\profile.js" />
+    <Content Include="Scripts\pages\shop.js" />
+    <Content Include="Scripts\pages\table-data.js" />
+    <Content Include="Scripts\pages\timeline.js" />
+    <Content Include="Scripts\plugins\datatables\dataTables.bootstrap.js" />
+    <Content Include="Scripts\plugins\datatables\dataTables.tableTools.js" />
+    <Content Include="Scripts\plugins\datatables\fnReloadAjax.js" />
+    <Content Include="Scripts\plugins\datatables\jquery.dataTables.js" />
+    <Content Include="Scripts\plugins\datatables\jquery.dataTables.min.js" />
+    <Content Include="Scripts\prettify-small-1-Jun-2011\google-code-prettify\lang-apollo.js" />
+    <Content Include="Scripts\prettify-small-1-Jun-2011\google-code-prettify\lang-clj.js" />
+    <Content Include="Scripts\prettify-small-1-Jun-2011\google-code-prettify\lang-css.js" />
+    <Content Include="Scripts\prettify-small-1-Jun-2011\google-code-prettify\lang-go.js" />
+    <Content Include="Scripts\prettify-small-1-Jun-2011\google-code-prettify\lang-hs.js" />
+    <Content Include="Scripts\prettify-small-1-Jun-2011\google-code-prettify\lang-lisp.js" />
+    <Content Include="Scripts\prettify-small-1-Jun-2011\google-code-prettify\lang-lua.js" />
+    <Content Include="Scripts\prettify-small-1-Jun-2011\google-code-prettify\lang-ml.js" />
+    <Content Include="Scripts\prettify-small-1-Jun-2011\google-code-prettify\lang-n.js" />
+    <Content Include="Scripts\prettify-small-1-Jun-2011\google-code-prettify\lang-proto.js" />
+    <Content Include="Scripts\prettify-small-1-Jun-2011\google-code-prettify\lang-scala.js" />
+    <Content Include="Scripts\prettify-small-1-Jun-2011\google-code-prettify\lang-sql.js" />
+    <Content Include="Scripts\prettify-small-1-Jun-2011\google-code-prettify\lang-tex.js" />
+    <Content Include="Scripts\prettify-small-1-Jun-2011\google-code-prettify\lang-vb.js" />
+    <Content Include="Scripts\prettify-small-1-Jun-2011\google-code-prettify\lang-vhdl.js" />
+    <Content Include="Scripts\prettify-small-1-Jun-2011\google-code-prettify\lang-wiki.js" />
+    <Content Include="Scripts\prettify-small-1-Jun-2011\google-code-prettify\lang-xq.js" />
+    <Content Include="Scripts\prettify-small-1-Jun-2011\google-code-prettify\lang-yaml.js" />
+    <Content Include="Scripts\prettify-small-1-Jun-2011\google-code-prettify\prettify.css" />
+    <Content Include="Scripts\prettify-small-1-Jun-2011\google-code-prettify\prettify.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Document\UploadForm.cshtml" />
+    <Content Include="Views\Employees\Details.cshtml" />
+    <Content Include="Views\Employees\Index.cshtml" />
+    <Content Include="Views\Employees\Upload.cshtml" />
+    <Content Include="Views\Document\_DocumentsPartial.cshtml" />
+    <Content Include="Scripts\pages\ajax_children.json" />
+    <Content Include="Scripts\pages\ajax_roots.json" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\_UsersPartial.cshtml" />
+    <Content Include="Views\User\_UserEdit.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
+    <Content Include="Views\Home\AboutOI.cshtml" />
+    <Content Include="Views\Home\Chart.cshtml" />
+    <Content Include="Scripts\jquery-2.0.0.min.map" />
+    <Content Include="Views\ChartData\Productivity.cshtml" />
+    <Content Include="Views\ChartData\URSC.cshtml" />
+    <Content Include="Views\ChartData\TruckMovement.cshtml" />
+    <Content Include="Views\ChartData\RecDisp.cshtml" />
+    <Content Include="Views\ChartData\StockonHand.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Repository.Pattern.Ef6\Repository.Pattern.Ef6.csproj">
+      <Project>{f68a1d19-93fb-47c1-a22b-42bea3e4fd8c}</Project>
+      <Name>Repository.Pattern.Ef6</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repository.Pattern\Repository.Pattern.csproj">
+      <Project>{6e682a14-c872-4813-b620-76e108dea683}</Project>
+      <Name>Repository.Pattern</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54584</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2012</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,71 @@
+﻿@model DotNet.Highcharts.Highcharts
+
+@{
+    ViewBag.Title = "URSC";
+}
+
+@(Model)
+
+<div class="page-title">
+    <h3>UR/SC Ratio Report</h3>
+    <div class="page-breadcrumb">
+        <ol class="breadcrumb">
+            Items are by percentages @ViewBag.ReportParam
+        </ol>
+    </div>
+</div>
+
+<link href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+<script type='text/javascript'>
+    $(function(){
+      $('.date-picker').datepicker();
+    })
+</script>
+
+<div class="col-md-6">
+    @using (Html.BeginForm("Search_URSC", "ChartData", FormMethod.Post))
+    {
+        <p>
+            <table cellpadding="2" cellspacing="5">
+                <tr>
+                    <td> Sort Center:</td>
+                    <td>
+                        <select name="SortCenter" id="SortCenter">
+                            <option value="All">All</option>
+                            <option value="DrakeWestEnd">Drake West End</option>
+                            <option value="DrakeGillman">Drake Gillman</option>
+                            <option value="DrakeLaverton">Drake Laverton</option>
+                            <option value="DrakeStMarys">Drake St. Marys</option>
+                        </select>
+                    </td>
+                    <td>Item</td>
+                    <td>
+                        <select name="URSCItem" id="URSCItem">
+                            <option value="Pallete">Pallete</option>
+                            <option value="Composite">Composite</option>
+                            <option value="HollowProfile">Hollow Profile</option>
+                            <option value="TopFrames">Top Frames</option>
+                        </select>
+                        </td>
+
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Received Date From :</td>
+                    <td><input id="RecDateFrom" class='date-picker' type="text" name="RecDateFrom" /></td>
+                    <td>To :</td>
+                    <td><input id="RecDateTo" class='date-picker' type="text" name="RecDateTo" /></td>
+                    <td><input type="submit" value="Search" /></td>
+                </tr>
+
+            </table>
+        </p>
+
+
+    }
+</div>
+

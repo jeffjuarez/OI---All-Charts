@@ -1,0 +1,89 @@
+﻿@using OI.MVC.Helpers
+@model IEnumerable<OI.Entities.Models.Employee>
+
+@{
+    ViewBag.Title = "Employees";
+}
+<div class="page-title">
+    <h3>Employees</h3>
+    <div class="page-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="active">List of Employees</li>            
+        </ol>
+    </div>
+</div>
+
+<div id="main-wrapper">
+    <div class="row">        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-white">
+                    <div class="panel-body">
+                        <div class="box-body table-responsive">
+                            <table id="employeeList" class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                                                    <th>Company</th>
+                                        <th>@Html.DisplayNameFor(model => model.EmployeeNumber)</th>
+                                        <th>@Html.DisplayNameFor(model => model.Fullname)</th>
+                                                                    <th>Date of Birth</th>
+                                        <th>@Html.DisplayNameFor(model => model.Gender)</th>
+                                                                    <th>Member Type</th>
+                                        <th>@Html.DisplayNameFor(model => model.Remarks)</th>
+                                        <th>&nbsp;</th>
+                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@item.Company.CorporateName</td>
+                                            <td>@item.EmployeeNumber</td>
+                                            <td>@item.Fullname</td>
+                                            <td>@String.Format("{0:MMM dd, yyyy}", item.DateOfBirth)</td>
+                                            <td>@item.Gender</td>
+                                            <td>@item.MemberType</td>
+                                            <td>@item.Remarks</td>
+                                            <td>
+
+                                                                            @*@Html.ActionLink("View ", "Documents", "Document", new {id = item.Id}, null)
+                                                                            @if(User.IsInRole("Admin")){
+                                                                                <text>|</text> @Html.ActionLink("Upload ", "Upload", new {id = item.Id})
+                                                                            }*@
+
+                                                                      
+                                                                                @*<text> <a href="#">Email @item.EmployeeNumber</a></text>*@ 
+                                                                      
+                                            </td>
+                                        </tr>
+                                    }
+                                                                </tbody>
+                                </table>
+
+                                <div>
+                                    @*@Html.ActionLink("Download All", "DownloadAllFiles")*@
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    @Scripts.Render("~/bundles/dataTables")
+    <script type="text/javascript">
+        $(function () {
+            var empTable = $("#employeeList").dataTable({
+                "bPaginate": true,
+                "bAutoWidth": false,
+                "aDataSort": true,
+                "bFilter": true                
+            });            
+        });
+
+    </script>
+}
+
+

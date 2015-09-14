@@ -1,0 +1,33 @@
+﻿@using OI.MVC.Models;
+@{
+    ViewBag.Title = "Manage Account";
+}
+
+<div class="page-title">
+    <h3>Manage Account</h3>
+    <div class="page-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="active">Change Password</li>            
+        </ol>
+    </div>
+</div>
+
+<div id="main-wrapper">
+    <div class="row">        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-white">
+                    <div class="panel-body">
+                        <p class="text-success">@ViewBag.StatusMessage</p>
+                        @Html.Partial("_ChangePasswordPartial")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jquery")
+}

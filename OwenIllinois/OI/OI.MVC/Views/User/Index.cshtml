@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "User Management";
+}
+
+<div class="page-title">
+    <h3>User Management</h3>
+    <div class="page-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="active">List of Users</li>            
+        </ol>
+    </div>
+</div>
+
+<div id="main-wrapper">
+    <div class="row">        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-white">
+                    <div class="panel-body">
+                        @Html.Partial("_UsersPartial")
+
+                        <div>
+                            <a href="/User/UserAdd" title="Add New User">Add New User</a>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section scripts {
+    @Scripts.Render("~/bundles/dataTables")
+    <script type="text/javascript">
+        $(function () {
+            var userTable = $("#userList").dataTable({
+                "bPaginate": true,
+                "bAutoWidth": false,
+                "aDataSort": true,
+                "bFilter": true
+            });            
+        });
+
+    </script>
+}

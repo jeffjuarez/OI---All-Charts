@@ -1,0 +1,30 @@
+﻿@model IEnumerable<OI.MVC.Models.DocumentViewModel>
+
+<table id="docList" class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Filename)</th>
+            <th>Sort Center</th>
+            <th>Receive Date From</th>
+            <th>Prepared By</th>
+            <th>Date Uploaded</th>
+            <th>Uploaded By</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+          
+             
+                <tr>
+                    <td>@item.Filename</td>                
+                    <td>@item.SortCenter</td>
+                    <td>@String.Format("{0:MMM dd, yyyy}", item.ReceivedDateFrom)</td>
+                    <td>@item.PreparedBy</td>
+                    <td>@String.Format("{0:MMM dd, yyyy}", item.DateUploaded)</td>
+                    <td>@item.UserUploaded</td>
+                    <td>@Html.ActionLink("View", "View", new { id = item.Id }, new { target = "_blank" })</td>
+                </tr>
+        }
+    </tbody>
+</table>

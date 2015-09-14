@@ -1,0 +1,53 @@
+C:\Casa\Casa Medica\eResult\eResultCASAMedica\Repository.Pattern\bin\Debug\Repository.Pattern.dll.config
+C:\Casa\Casa Medica\eResult\eResultCASAMedica\Repository.Pattern\bin\Debug\Repository.Pattern.dll
+C:\Casa\Casa Medica\eResult\eResultCASAMedica\Repository.Pattern\bin\Debug\Repository.Pattern.pdb
+C:\Casa\Casa Medica\eResult\eResultCASAMedica\Repository.Pattern\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Casa\Casa Medica\eResult\eResultCASAMedica\Repository.Pattern\bin\Debug\Newtonsoft.Json.dll
+C:\Casa\Casa Medica\eResult\eResultCASAMedica\Repository.Pattern\bin\Debug\System.Net.Http.Formatting.dll
+C:\Casa\Casa Medica\eResult\eResultCASAMedica\Repository.Pattern\bin\Debug\System.Web.Helpers.dll
+C:\Casa\Casa Medica\eResult\eResultCASAMedica\Repository.Pattern\bin\Debug\System.Web.Http.dll
+C:\Casa\Casa Medica\eResult\eResultCASAMedica\Repository.Pattern\bin\Debug\System.Web.Http.WebHost.dll
+C:\Casa\Casa Medica\eResult\eResultCASAMedica\Repository.Pattern\bin\Debug\System.Web.Mvc.dll
+C:\Casa\Casa Medica\eResult\eResultCASAMedica\Repository.Pattern\bin\Debug\System.Web.Razor.dll
+C:\Casa\Casa Medica\eResult\eResultCASAMedica\Repository.Pattern\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Casa\Casa Medica\eResult\eResultCASAMedica\Repository.Pattern\bin\Debug\System.Web.WebPages.dll
+C:\Casa\Casa Medica\eResult\eResultCASAMedica\Repository.Pattern\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Casa\Casa Medica\eResult\eResultCASAMedica\Repository.Pattern\bin\Debug\Newtonsoft.Json.xml
+C:\Casa\Casa Medica\eResult\eResultCASAMedica\Repository.Pattern\bin\Debug\System.Net.Http.Formatting.xml
+C:\Casa\Casa Medica\eResult\eResultCASAMedica\Repository.Pattern\bin\Debug\System.Web.Helpers.xml
+C:\Casa\Casa Medica\eResult\eResultCASAMedica\Repository.Pattern\bin\Debug\System.Web.Http.xml
+C:\Casa\Casa Medica\eResult\eResultCASAMedica\Repository.Pattern\bin\Debug\System.Web.Http.WebHost.xml
+C:\Casa\Casa Medica\eResult\eResultCASAMedica\Repository.Pattern\bin\Debug\System.Web.Mvc.xml
+C:\Casa\Casa Medica\eResult\eResultCASAMedica\Repository.Pattern\bin\Debug\System.Web.Razor.xml
+C:\Casa\Casa Medica\eResult\eResultCASAMedica\Repository.Pattern\bin\Debug\System.Web.WebPages.xml
+C:\Casa\Casa Medica\eResult\eResultCASAMedica\Repository.Pattern\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Casa\Casa Medica\eResult\eResultCASAMedica\Repository.Pattern\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Casa\Casa Medica\eResult\eResultCASAMedica\Repository.Pattern\obj\Debug\Repository.Pattern.csprojResolveAssemblyReference.cache
+C:\Casa\Casa Medica\eResult\eResultCASAMedica\Repository.Pattern\obj\Debug\Repository.Pattern.dll
+C:\Casa\Casa Medica\eResult\eResultCASAMedica\Repository.Pattern\obj\Debug\Repository.Pattern.pdb
+C:\Projects\OwenIllinois\OI\Repository.Pattern\bin\Debug\Repository.Pattern.dll.config
+C:\Projects\OwenIllinois\OI\Repository.Pattern\bin\Debug\Repository.Pattern.dll
+C:\Projects\OwenIllinois\OI\Repository.Pattern\bin\Debug\Repository.Pattern.pdb
+C:\Projects\OwenIllinois\OI\Repository.Pattern\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Projects\OwenIllinois\OI\Repository.Pattern\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\OwenIllinois\OI\Repository.Pattern\bin\Debug\System.Net.Http.Formatting.dll
+C:\Projects\OwenIllinois\OI\Repository.Pattern\bin\Debug\System.Web.Helpers.dll
+C:\Projects\OwenIllinois\OI\Repository.Pattern\bin\Debug\System.Web.Http.dll
+C:\Projects\OwenIllinois\OI\Repository.Pattern\bin\Debug\System.Web.Http.WebHost.dll
+C:\Projects\OwenIllinois\OI\Repository.Pattern\bin\Debug\System.Web.Mvc.dll
+C:\Projects\OwenIllinois\OI\Repository.Pattern\bin\Debug\System.Web.Razor.dll
+C:\Projects\OwenIllinois\OI\Repository.Pattern\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Projects\OwenIllinois\OI\Repository.Pattern\bin\Debug\System.Web.WebPages.dll
+C:\Projects\OwenIllinois\OI\Repository.Pattern\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Projects\OwenIllinois\OI\Repository.Pattern\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\OwenIllinois\OI\Repository.Pattern\bin\Debug\System.Net.Http.Formatting.xml
+C:\Projects\OwenIllinois\OI\Repository.Pattern\bin\Debug\System.Web.Helpers.xml
+C:\Projects\OwenIllinois\OI\Repository.Pattern\bin\Debug\System.Web.Http.xml
+C:\Projects\OwenIllinois\OI\Repository.Pattern\bin\Debug\System.Web.Http.WebHost.xml
+C:\Projects\OwenIllinois\OI\Repository.Pattern\bin\Debug\System.Web.Mvc.xml
+C:\Projects\OwenIllinois\OI\Repository.Pattern\bin\Debug\System.Web.Razor.xml
+C:\Projects\OwenIllinois\OI\Repository.Pattern\bin\Debug\System.Web.WebPages.xml
+C:\Projects\OwenIllinois\OI\Repository.Pattern\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Projects\OwenIllinois\OI\Repository.Pattern\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Projects\OwenIllinois\OI\Repository.Pattern\obj\Debug\Repository.Pattern.dll
+C:\Projects\OwenIllinois\OI\Repository.Pattern\obj\Debug\Repository.Pattern.pdb

@@ -1,0 +1,31 @@
+﻿@using OI.MVC.Helpers
+@model IEnumerable<OI.Entities.Models.Account>
+
+
+
+<table id="userList" class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Fullname</th>
+            <th>Access Type</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Username</td>
+                <td>@item.Employee.Fullname</td>
+                <td>@item.Role.RoleType</td>
+                <td>
+                    <a href="UserEdit?id=@item.Id">Edit</a>
+                </td>
+                
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,57 @@
+﻿@model OI.MVC.Models.LoginViewModel
+
+@{
+    ViewBag.Title = "OI Login";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Drake International</title>
+    
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta charset="UTF-8">
+    <meta name="description" content="Drake" />
+    <meta name="keywords" content="Drake" />
+    <meta name="author" content="Drake" />
+
+    @Styles.Render("~/Content/plugins")
+    @Styles.Render("~/Content/theme")    
+</head>
+<body class="page-login">
+    <main class="page-content">
+        <div class="page-inner">
+            <div id="main-wrapper">
+                <div class="row">
+                    <div class="col-md-3 center">
+                        <div class="login-box">
+                            <a href="index.html" class="logo-name text-lg text-center">Owens-Illinois Login</a>
+                                <p class="text-center m-t-md">Please login below to proceed...</p>
+                                @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "m-t-md", role = "form" }))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    @Html.ValidationSummary(true)
+                                    <div class="form-group">
+                                        Username
+                                        <input type="text" class="form-control" placeholder="type yoour user id" name="Username" required>
+                                    </div>
+                                    <div class="form-group">
+                                        Password
+                                        <input type="password" class="form-control" placeholder="type your password" name="Password" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-success btn-block">Login</button>
+                                <p class="text-center m-t-xs text-sm">Copyright &copy; @DateTime.Now.Year Drake International<br />All rights reserved.</p>
+                                }
+                        </div>
+                    </div>
+                </div><!-- Row -->
+            </div><!-- Main Wrapper -->
+        </div><!-- Page Inner -->
+    </main><!-- Page Content -->
+    @Scripts.Render("~/bundles/scripts")    
+    
+</body>
+</html>
